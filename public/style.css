@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    margin-top: 50px;
+}
+
+.btn{
+    background-color: #9BAF1E;
+    border: 0;
+}
+
+.precio, span{
+    font-weight: bold;
+}
+
+.title-2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.catalogo__container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 150px;;
+}
+
+.card{
+    margin-top: 20px;
+}
+
+
+.navbar{
+    background-color: #9BAF1E;
+    height: 80px;
+}
+
+.container-fluid{
+    height: 100%;
+}
+
+.container-fluid a{
+    height: 100%;
+}
+.navbar img{
+    height: 100%;
+}
+
+@media screen and (max-width: 800px){
+    .carousel{
+        display: none;
+    }
+
+    .catalogo__container{
+        width: 90%;
+        justify-content: center;
+    }
+
+    .title-2, .slider{
+        display: none;
+    }
+
+    .slider, .slide{
+        display: none;
+    }
+    
+}
+
+.slider{
+    align-items: center;
+    background: #e3e3e3;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  @-webkit-keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  .slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+  }
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    -webkit-animation: scroll 15s linear infinite;
+            animation: scroll 15s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .slider .slide {
+    height: auto;
+    width: auto;
+  }
